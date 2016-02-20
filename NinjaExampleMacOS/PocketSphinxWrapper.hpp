@@ -29,7 +29,6 @@ public:
     
     string getTheWord();
     //Helper functions. Not sure what the visibility scope should be
-protected:
     void readAndProcessFromFile();
     
 private:

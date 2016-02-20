@@ -41,6 +41,7 @@
 		91E7B97A1C77EEB600BD6623 /* AudioFileWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E7B9741C77EEB600BD6623 /* AudioFileWriter.m */; };
 		91E7B97B1C77EEB600BD6623 /* Novocaine.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E7B9761C77EEB600BD6623 /* Novocaine.m */; };
 		91E7B97C1C77EEB600BD6623 /* RingBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 91E7B9781C77EEB600BD6623 /* RingBuffer.mm */; };
+		91E7B97E1C77F82B00BD6623 /* fire.raw in Resources */ = {isa = PBXBuildFile; fileRef = 91E7B97D1C77F82B00BD6623 /* fire.raw */; };
 		91F9CC201C75035000B7474A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F9CC1F1C75035000B7474A /* main.m */; };
 		91F9CC231C75035000B7474A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 91F9CC221C75035000B7474A /* AppDelegate.mm */; };
 		91F9CC261C75035000B7474A /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F9CC251C75035000B7474A /* GameScene.m */; };
@@ -95,6 +96,7 @@
 		91E7B9761C77EEB600BD6623 /* Novocaine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Novocaine.m; sourceTree = "<group>"; };
 		91E7B9771C77EEB600BD6623 /* RingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RingBuffer.h; sourceTree = "<group>"; };
 		91E7B9781C77EEB600BD6623 /* RingBuffer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RingBuffer.mm; sourceTree = "<group>"; };
+		91E7B97D1C77F82B00BD6623 /* fire.raw */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire.raw; sourceTree = "<group>"; };
 		91F9CC1B1C75035000B7474A /* NinjaExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NinjaExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F9CC1F1C75035000B7474A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		91F9CC211C75035000B7474A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		91C1EFEA1C77E3C300F88A95 /* NinjaExampleMacOS */ = {
 			isa = PBXGroup;
 			children = (
+				91E7B97D1C77F82B00BD6623 /* fire.raw */,
 				91E7B9701C77EEB600BD6623 /* Novocaine */,
 				91C1F0141C77E9DD00F88A95 /* libpocketsphinx.3.dylib */,
 				91C1F0161C77E9EE00F88A95 /* libsphinxad.3.dylib */,
@@ -377,6 +380,7 @@
 				91C1EFF71C77E3C300F88A95 /* Assets.xcassets in Resources */,
 				91C1F02B1C77EA1C00F88A95 /* noisedict in Resources */,
 				91C1F0311C77EA1C00F88A95 /* en-us.lm.bin in Resources */,
+				91E7B97E1C77F82B00BD6623 /* fire.raw in Resources */,
 				91C1F02D1C77EA1C00F88A95 /* sendump in Resources */,
 				91C1F02E1C77EA1C00F88A95 /* transition_matrices in Resources */,
 				91C1F0291C77EA1C00F88A95 /* mdef in Resources */,

@@ -59,7 +59,7 @@ string PocketSphinxWrapper::getTheWord(){
 }
 
 void PocketSphinxWrapper::readAndProcessFromFile(){
-    fh = fopen((bundlePath + "fire.raw").c_str(), "rb");
+    fh = fopen((bundlePath + "/fire.raw").c_str(), "rb");
     
     if (fh == NULL)
     {
