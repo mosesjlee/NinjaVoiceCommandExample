@@ -17,6 +17,8 @@ PocketSphinxWrapper::PocketSphinxWrapper(string path){
     } else {
         cout << "Failed to initialize the decoder and configurator" << endl;
     }
+    
+    bufIndex = 0;
 }
 
 PocketSphinxWrapper::~PocketSphinxWrapper(){
@@ -51,11 +53,50 @@ int PocketSphinxWrapper::initializeConfigureAndDecoder(){
 }
 
 void PocketSphinxWrapper::listenForInputStream(float * data, int numFrames, int numChannels){
-    
+    //Before check
+    if (bufIndex > 2 * SR) return;
+    for(int i = 0; i < numFrames; i++){
+        
+        //I only care about 1 channel anyway
+        for(int j = 0; j < 1; j++){
+            buf[bufIndex] = data[i * numChannels + j] * CONVER_FACTOR;
+            bufIndex++;
+            //During Check
+            if (bufIndex > 2 * SR) return;
+        }
+    }
 }
 
 string PocketSphinxWrapper::getTheWord(){
     return theWord;
+}
+
+void PocketSphinxWrapper::processTheInputStream(){
+    rv = ps_start_utt(ps);
+    if (rv < 0) {
+        cout << "Could not understand samples" << endl;
+        return;
+    }
+    int16 * ptr = buf;
+    while (ptr != &buf[SR * 2]){
+        size_t nsamp; nsamp = fread(buf, 2, 512, fh);
+        rv = ps_process_raw(ps, buf, nsamp, FALSE, FALSE);
+        ptr += 512;
+    }
+    
+    rv = ps_end_utt(ps);
+    if (rv < 0) {
+        cout << "Could not get the last utterance " << endl;
+        return;
+    }
+    
+    hyp = ps_get_hyp(ps, &score);
+    if (hyp == NULL){
+        cout << "Could not get the word" << endl;
+        return;
+    }
+    theWord = string(hyp);
+    bufIndex = 0;
 }
 
 void PocketSphinxWrapper::readAndProcessFromFile(){

@@ -15,7 +15,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     CGSize size = CGSizeMake(1024, 768);
-    SKScene *scene = [GameScene sceneWithSize:size];
+    GameScene *scene = [GameScene sceneWithSize:size];
     
     NSLog(@"Scaling the screen");
     /* Set the scale mode to scale to fit the window */
@@ -45,21 +45,26 @@
     __block float dbVal = 0.0;
     [self.audioManager setInputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels) {
     
-            vDSP_vsq(data, 1, data, 1, numFrames*numChannels);
-            float meanVal = 0.0;
-            vDSP_meanv(data, 1, &meanVal, numFrames*numChannels);
-    
-            float one = 1.0;
-            vDSP_vdbcon(&meanVal, 1, &one, &meanVal, 1, 1, 0);
-            dbVal = dbVal + 0.2*(meanVal - dbVal);
-            printf("Decibel level: %f\n", dbVal);
+        vDSP_vsq(data, 1, data, 1, numFrames*numChannels);
+        float meanVal = 0.0;
+        vDSP_meanv(data, 1, &meanVal, numFrames*numChannels);
+
+        float one = 1.0;
+        vDSP_vdbcon(&meanVal, 1, &one, &meanVal, 1, 1, 0);
+        dbVal = dbVal + 0.2*(meanVal - dbVal);
+        printf("Decibel level: %f\n", dbVal);
+        
+        if(wself.pSphinx->getTheWord().compare("fire her")){
+            [scene fireProjectile];
+        }
     }];
 
 
     //Start the audio process
-    //[self.audioManager play];
-    //self.pSphinx->readAndProcessFromFile();
-    //self.wordLabel.stringValue = [NSString stringWithFormat:@"%s", self.pSphinx->getTheWord().c_str()];
+    [self.audioManager play];
+    self.pSphinx->readAndProcessFromFile();
+    NSLog(@"%s", self.pSphinx->getTheWord().c_str());
+    self.wordLabel.stringValue = @"TESTING"; //[NSString stringWithFormat:@"%s", self.pSphinx->getTheWord().c_str()];
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {
