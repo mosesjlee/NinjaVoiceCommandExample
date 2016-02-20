@@ -52,9 +52,9 @@ int PocketSphinxWrapper::initializeConfigureAndDecoder(){
     return 1;
 }
 
-void PocketSphinxWrapper::listenForInputStream(float * data, int numFrames, int numChannels){
+void PocketSphinxWrapper::listenForInputStream(float * data, int numFrames, int numChannels, int * flag){
     //Before check
-    if (bufIndex > 2 * SR) return;
+    if (bufIndex >  SR) return;
     for(int i = 0; i < numFrames; i++){
         
         //I only care about 1 channel anyway
@@ -62,7 +62,10 @@ void PocketSphinxWrapper::listenForInputStream(float * data, int numFrames, int 
             buf[bufIndex] = data[i * numChannels + j] * CONVER_FACTOR;
             bufIndex++;
             //During Check
-            if (bufIndex > 2 * SR) return;
+            if (bufIndex >  SR) {
+                *flag = 1;
+                return;
+            }
         }
     }
 }
@@ -78,9 +81,9 @@ void PocketSphinxWrapper::processTheInputStream(){
         return;
     }
     int16 * ptr = buf;
-    while (ptr != &buf[SR * 2]){
-        size_t nsamp; nsamp = fread(buf, 2, 512, fh);
-        rv = ps_process_raw(ps, buf, nsamp, FALSE, FALSE);
+    while (ptr != &buf[SR]){
+        //size_t nsamp; nsamp = fread(buf, 2, 512, ptr);
+        rv = ps_process_raw(ps, buf, 512, FALSE, FALSE);
         ptr += 512;
     }
     
