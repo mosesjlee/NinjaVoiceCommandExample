@@ -101,8 +101,10 @@ static const uint32_t monsterCategory    = 0x1 << 1;
     [self updateWithTimeSinceLastUpdate:timeSinceLast];
 }
 
--(void)screenInteractionEndedAtLocation:(CGPoint)location {
 
+-(void)screenInteractionStartedAtLocation:(CGPoint)location {
+    self.fireLocation = location;
+    [self fireProjectile];
 }
 
 -(void) fireProjectile{

@@ -415,8 +415,8 @@ static Novocaine *audioManager = nil;
                "Couldn't get the hardware output stream format");
     
     // TODO: check this works on iOS!
-    _inputFormat.mSampleRate = 44100.0;
-    _outputFormat.mSampleRate = 44100.0;
+    _inputFormat.mSampleRate =  16000.0//44100.0;
+    _outputFormat.mSampleRate = 16000.0//44100.0;
     self.samplingRate = _inputFormat.mSampleRate;
     self.numBytesPerSample = _inputFormat.mBitsPerChannel / 8;
     

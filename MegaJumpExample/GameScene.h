@@ -9,7 +9,7 @@
 #import <SpriteKit/SpriteKit.h>
 #import "SKMScene.h"
 
-@interface GameScene : SKScene <SKPhysicsContactDelegate>
+@interface GameScene : SKMScene<SKPhysicsContactDelegate>
 @property (nonatomic) SKSpriteNode * player;
 @property (nonatomic) NSTimeInterval lastSpawnTimeInterval;
 @property (nonatomic) NSTimeInterval lastUpdateTimeInterval;

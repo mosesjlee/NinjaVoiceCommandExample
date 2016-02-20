@@ -13,6 +13,11 @@ Mellon University's (CMU) sphinx library and from there it made the work a lot e
 much pointed me to http://www.politepix.com/openears/ to have a fast integration of all
 their libraries which are built in C to have it integrated with my platform as soon as possible.
 
+All in all I made 1 iOS app using OpenEars Framework and 1 Mac OS app using the bare bones PocketSphinx library.
+For the Mac OS app I have created my own classes PocketSphinxWrapper.hpp and PocketSphinxWrapper.cpp.
+Unfortunately I was not able to fully integrate my wrapper class, but you can take a look at the code to see
+what my design was.
+
 TO RUN:
 
 You could run this app on an iphone simulator provided that you have the latest version of Mac OS X (10.11) 
@@ -23,13 +28,20 @@ LIBRARIES/FRAMEWORKS:
 CMU-Sphinxbase     --- C library for basic speech recognition
 CMU-Pocketsphinx   --- C library built on top of the Sphinxbase focused on mobile devices
 OpenEars           --- Objective C Framework built on top of Pocketsphinx to allow simpler iOS integration
+Novocaine					 --- Objective C++ and C++ wrapper for Apple's core audio framework
 SpriteKit          --- Apple Inc's 2D game engine
 
 TO PLAY:
 
+iOS:
 Say UP to move the player up
 Say DOWN to move the player down
 Tap on the location you want to fire a projectile. Say FIRE to shoot a projectile at the tapped location.
+
+Mac OS:
+Say UP to move the player up
+Say DOWN to move the player down
+Click on the location you want to fire a projectile. Say FIRE to shoot a projectile at the tapped location.
 
 GAME DESIGN:
 
@@ -40,6 +52,7 @@ The player could control the character up and down with voice commands.
 
 DESIGN DECISIONS:
 
+iOS:
 I decided to go with SpriteKit on iOS because I had no experience with Unreal and some small
 Unity experience and never designed a game. SpriteKit allowed me to build a game with 
 relative ease so I can spend most of my time researching speech recognition. 
@@ -68,6 +81,12 @@ the registered method would be called.
 GameViewController inherited from the UIViewController and contains the GameScene object, the objects
 from the OpenEars framework and any other UI elements. This handled any user inputs and responded to
 the GameScene object.
+
+MAC OS X:
+
+It is pretty much similar to the iOS specs except I did not use OpenEars. I made my own C++ wrapper class
+called PocketSphinxWrapper in the files PocketSphinxWrapper.hpp and PocketSphinxWrapper.cpp. These classes
+illustrate how the PocketSphinx functions work.
 
 
 PROMPT:
