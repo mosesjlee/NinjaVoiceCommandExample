@@ -52,15 +52,17 @@
         float one = 1.0;
         vDSP_vdbcon(&meanVal, 1, &one, &meanVal, 1, 1, 0);
         dbVal = dbVal + 0.2*(meanVal - dbVal);
-        printf("Decibel level: %f\n", dbVal);
-        wself.pSphinx->listenForInputStream(data, numFrames, numChannels, &flag);
+        //printf("Decibel level: %f\n", dbVal);
+        if(dbVal > -40.0)
+            wself.pSphinx->listenForInputStream(data, numFrames, numChannels, &flag);
         
         if(flag > 0) {
             NSLog(@"Processing");
-
+            //[scene fireProjectile];
             wself.pSphinx->processTheInputStream();
             if(wself.pSphinx->getTheWord().compare("fire")){
                 [scene fireProjectile];
+                NSLog(@"%s",wself.pSphinx->getTheWord().c_str());
             }
         }
     }];

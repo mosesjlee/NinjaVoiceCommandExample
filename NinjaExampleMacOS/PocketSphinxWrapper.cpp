@@ -68,7 +68,7 @@ void PocketSphinxWrapper::listenForInputStream(float * data, int numFrames, int 
             }
         }
     }
-    printf("flag: %d bufIndex: %d\n", *flag, bufIndex);
+    //printf("flag: %d bufIndex: %d\n", *flag, bufIndex);
 }
 
 string PocketSphinxWrapper::getTheWord(){
