@@ -57,6 +57,7 @@
         
         if(flag > 0) {
             NSLog(@"Processing");
+
             wself.pSphinx->processTheInputStream();
             if(wself.pSphinx->getTheWord().compare("fire")){
                 [scene fireProjectile];

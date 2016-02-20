@@ -54,7 +54,7 @@ int PocketSphinxWrapper::initializeConfigureAndDecoder(){
 
 void PocketSphinxWrapper::listenForInputStream(float * data, int numFrames, int numChannels, int * flag){
     //Before check
-    if (bufIndex >  SR) return;
+    if (bufIndex >=  SR/2) return;
     for(int i = 0; i < numFrames; i++){
         
         //I only care about 1 channel anyway
@@ -62,12 +62,13 @@ void PocketSphinxWrapper::listenForInputStream(float * data, int numFrames, int 
             buf[bufIndex] = data[i * numChannels + j] * CONVER_FACTOR;
             bufIndex++;
             //During Check
-            if (bufIndex >  SR) {
+            if (bufIndex >=  SR/2) {
                 *flag = 1;
                 return;
             }
         }
     }
+    printf("flag: %d bufIndex: %d\n", *flag, bufIndex);
 }
 
 string PocketSphinxWrapper::getTheWord(){
@@ -75,13 +76,17 @@ string PocketSphinxWrapper::getTheWord(){
 }
 
 void PocketSphinxWrapper::processTheInputStream(){
+    printf("Process the inputstream\n");
     rv = ps_start_utt(ps);
     if (rv < 0) {
         cout << "Could not understand samples" << endl;
+        bufIndex = 0;
         return;
     }
+    
+    printf("Reading the buffer the inputstream\n");
     int16 * ptr = buf;
-    while (ptr != &buf[SR]){
+    while (ptr < &buf[SR/2]){
         //size_t nsamp; nsamp = fread(buf, 2, 512, ptr);
         rv = ps_process_raw(ps, buf, 512, FALSE, FALSE);
         ptr += 512;
@@ -90,14 +95,18 @@ void PocketSphinxWrapper::processTheInputStream(){
     rv = ps_end_utt(ps);
     if (rv < 0) {
         cout << "Could not get the last utterance " << endl;
+        bufIndex = 0;
         return;
     }
     
     hyp = ps_get_hyp(ps, &score);
     if (hyp == NULL){
         cout << "Could not get the word" << endl;
+        bufIndex = 0;
         return;
     }
+    
+    printf("Reading the buffer the inputstream\n");
     theWord = string(hyp);
     bufIndex = 0;
 }

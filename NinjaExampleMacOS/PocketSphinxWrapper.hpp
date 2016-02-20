@@ -37,7 +37,7 @@ private:
     ps_decoder_t * ps;
     cmd_ln_t * config;
     char const *hyp, *uttid;
-    int16 buf[SR];          //Listen for 1 seconds (1 * 16000) 16000 Samples
+    int16 buf[SR/2];          //Listen for .5 seconds (.5 * 16000) 8000 Samples
     int bufIndex;
     bool bufFull;
     int rv;
