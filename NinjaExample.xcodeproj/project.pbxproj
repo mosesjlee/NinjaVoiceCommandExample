@@ -1,0 +1,662 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		91A0A22D1C76B13300A1F492 /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 91A0A2291C76B13200A1F492 /* AcousticModelEnglish.bundle */; };
+		91A0A22E1C76B13300A1F492 /* AcousticModelSpanish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 91A0A22A1C76B13300A1F492 /* AcousticModelSpanish.bundle */; };
+		91A0A22F1C76B13300A1F492 /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A0A22B1C76B13300A1F492 /* OpenEars.framework */; };
+		91A0A2301C76B13300A1F492 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A0A22C1C76B13300A1F492 /* Slt.framework */; };
+		91C1EFBA1C77D47800F88A95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C1EFB91C77D47800F88A95 /* UIKit.framework */; };
+		91C1EFBD1C77D49900F88A95 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C1EFBC1C77D49900F88A95 /* SpriteKit.framework */; };
+		91C1EFC31C77D6E800F88A95 /* SKMScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C1EFC21C77D6E800F88A95 /* SKMScene.m */; };
+		91C1EFED1C77E3C300F88A95 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 91C1EFEC1C77E3C300F88A95 /* AppDelegate.mm */; };
+		91C1EFF01C77E3C300F88A95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C1EFEF1C77E3C300F88A95 /* main.m */; };
+		91C1EFF71C77E3C300F88A95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C1EFF61C77E3C300F88A95 /* Assets.xcassets */; };
+		91C1EFFA1C77E3C300F88A95 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91C1EFF81C77E3C300F88A95 /* MainMenu.xib */; };
+		91C1EFFF1C77E41900F88A95 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F9CC251C75035000B7474A /* GameScene.m */; };
+		91C1F0001C77E41C00F88A95 /* SKMScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C1EFC21C77D6E800F88A95 /* SKMScene.m */; };
+		91C1F0011C77E43200F88A95 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C1EFBC1C77D49900F88A95 /* SpriteKit.framework */; };
+		91C1F0031C77E7DE00F88A95 /* spritesMac.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 91C1F0021C77E7DE00F88A95 /* spritesMac.atlas */; };
+		91C1F0061C77E83500F88A95 /* PocketSphinxWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 91C1F0041C77E83500F88A95 /* PocketSphinxWrapper.cpp */; };
+		91C1F0151C77E9DD00F88A95 /* libpocketsphinx.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C1F0141C77E9DD00F88A95 /* libpocketsphinx.3.dylib */; };
+		91C1F0171C77E9EE00F88A95 /* libsphinxad.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C1F0161C77E9EE00F88A95 /* libsphinxad.3.dylib */; };
+		91C1F0191C77E9FD00F88A95 /* libsphinxbase.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C1F0181C77E9FD00F88A95 /* libsphinxbase.3.dylib */; };
+		91C1F0271C77EA1C00F88A95 /* cmudict-en-us.dict in Resources */ = {isa = PBXBuildFile; fileRef = 91C1F01B1C77EA1C00F88A95 /* cmudict-en-us.dict */; };
+		91C1F0281C77EA1C00F88A95 /* feat.params in Resources */ = {isa = PBXBuildFile; fileRef = 91C1F01D1C77EA1C00F88A95 /* feat.params */; };
+		91C1F0291C77EA1C00F88A95 /* mdef in Resources */ = {isa = PBXBuildFile; fileRef = 91C1F01E1C77EA1C00F88A95 /* mdef */; };
+		91C1F02A1C77EA1C00F88A95 /* means in Resources */ = {isa = PBXBuildFile; fileRef = 91C1F01F1C77EA1C00F88A95 /* means */; };
+		91C1F02B1C77EA1C00F88A95 /* noisedict in Resources */ = {isa = PBXBuildFile; fileRef = 91C1F0201C77EA1C00F88A95 /* noisedict */; };
+		91C1F02C1C77EA1C00F88A95 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 91C1F0211C77EA1C00F88A95 /* README */; };
+		91C1F02D1C77EA1C00F88A95 /* sendump in Resources */ = {isa = PBXBuildFile; fileRef = 91C1F0221C77EA1C00F88A95 /* sendump */; };
+		91C1F02E1C77EA1C00F88A95 /* transition_matrices in Resources */ = {isa = PBXBuildFile; fileRef = 91C1F0231C77EA1C00F88A95 /* transition_matrices */; };
+		91C1F02F1C77EA1C00F88A95 /* variances in Resources */ = {isa = PBXBuildFile; fileRef = 91C1F0241C77EA1C00F88A95 /* variances */; };
+		91C1F0301C77EA1C00F88A95 /* en-us-phone.lm.bin in Resources */ = {isa = PBXBuildFile; fileRef = 91C1F0251C77EA1C00F88A95 /* en-us-phone.lm.bin */; };
+		91C1F0311C77EA1C00F88A95 /* en-us.lm.bin in Resources */ = {isa = PBXBuildFile; fileRef = 91C1F0261C77EA1C00F88A95 /* en-us.lm.bin */; };
+		91E7B9791C77EEB600BD6623 /* AudioFileReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 91E7B9721C77EEB600BD6623 /* AudioFileReader.mm */; };
+		91E7B97A1C77EEB600BD6623 /* AudioFileWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E7B9741C77EEB600BD6623 /* AudioFileWriter.m */; };
+		91E7B97B1C77EEB600BD6623 /* Novocaine.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E7B9761C77EEB600BD6623 /* Novocaine.m */; };
+		91E7B97C1C77EEB600BD6623 /* RingBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 91E7B9781C77EEB600BD6623 /* RingBuffer.mm */; };
+		91F9CC201C75035000B7474A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F9CC1F1C75035000B7474A /* main.m */; };
+		91F9CC231C75035000B7474A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 91F9CC221C75035000B7474A /* AppDelegate.mm */; };
+		91F9CC261C75035000B7474A /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F9CC251C75035000B7474A /* GameScene.m */; };
+		91F9CC281C75035000B7474A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 91F9CC271C75035000B7474A /* GameScene.sks */; };
+		91F9CC2B1C75035000B7474A /* GameViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 91F9CC2A1C75035000B7474A /* GameViewController.mm */; };
+		91F9CC2E1C75035000B7474A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F9CC2C1C75035000B7474A /* Main.storyboard */; };
+		91F9CC301C75035000B7474A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F9CC2F1C75035000B7474A /* Assets.xcassets */; };
+		91F9CC331C75035000B7474A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F9CC311C75035000B7474A /* LaunchScreen.storyboard */; };
+		91F9CC3E1C75053600B7474A /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = 91F9CC3B1C75053600B7474A /* background-music-aac.caf */; };
+		91F9CC3F1C75053600B7474A /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = 91F9CC3C1C75053600B7474A /* pew-pew-lei.caf */; };
+		91F9CC401C75053600B7474A /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 91F9CC3D1C75053600B7474A /* sprites.atlas */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		91A0A2291C76B13200A1F492 /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
+		91A0A22A1C76B13300A1F492 /* AcousticModelSpanish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelSpanish.bundle; sourceTree = "<group>"; };
+		91A0A22B1C76B13300A1F492 /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
+		91A0A22C1C76B13300A1F492 /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
+		91C1EFB91C77D47800F88A95 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		91C1EFBC1C77D49900F88A95 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		91C1EFC11C77D6E800F88A95 /* SKMScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SKMScene.h; path = NinjaExampleMacOS/SKMScene.h; sourceTree = "<group>"; };
+		91C1EFC21C77D6E800F88A95 /* SKMScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SKMScene.m; path = NinjaExampleMacOS/SKMScene.m; sourceTree = "<group>"; };
+		91C1EFE91C77E3C300F88A95 /* NinjaExampleMacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NinjaExampleMacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91C1EFEB1C77E3C300F88A95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		91C1EFEC1C77E3C300F88A95 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		91C1EFEF1C77E3C300F88A95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		91C1EFF61C77E3C300F88A95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		91C1EFF91C77E3C300F88A95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		91C1EFFB1C77E3C300F88A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91C1F0021C77E7DE00F88A95 /* spritesMac.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = spritesMac.atlas; path = MegaJumpExample/spritesMac.atlas; sourceTree = "<group>"; };
+		91C1F0041C77E83500F88A95 /* PocketSphinxWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PocketSphinxWrapper.cpp; sourceTree = "<group>"; };
+		91C1F0051C77E83500F88A95 /* PocketSphinxWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PocketSphinxWrapper.hpp; sourceTree = "<group>"; };
+		91C1F0141C77E9DD00F88A95 /* libpocketsphinx.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpocketsphinx.3.dylib; sourceTree = "<group>"; };
+		91C1F0161C77E9EE00F88A95 /* libsphinxad.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsphinxad.3.dylib; sourceTree = "<group>"; };
+		91C1F0181C77E9FD00F88A95 /* libsphinxbase.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsphinxbase.3.dylib; sourceTree = "<group>"; };
+		91C1F01B1C77EA1C00F88A95 /* cmudict-en-us.dict */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "cmudict-en-us.dict"; sourceTree = "<group>"; };
+		91C1F01D1C77EA1C00F88A95 /* feat.params */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = feat.params; sourceTree = "<group>"; };
+		91C1F01E1C77EA1C00F88A95 /* mdef */ = {isa = PBXFileReference; lastKnownFileType = file; path = mdef; sourceTree = "<group>"; };
+		91C1F01F1C77EA1C00F88A95 /* means */ = {isa = PBXFileReference; lastKnownFileType = file; path = means; sourceTree = "<group>"; };
+		91C1F0201C77EA1C00F88A95 /* noisedict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = noisedict; sourceTree = "<group>"; };
+		91C1F0211C77EA1C00F88A95 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		91C1F0221C77EA1C00F88A95 /* sendump */ = {isa = PBXFileReference; lastKnownFileType = file; path = sendump; sourceTree = "<group>"; };
+		91C1F0231C77EA1C00F88A95 /* transition_matrices */ = {isa = PBXFileReference; lastKnownFileType = file; path = transition_matrices; sourceTree = "<group>"; };
+		91C1F0241C77EA1C00F88A95 /* variances */ = {isa = PBXFileReference; lastKnownFileType = file; path = variances; sourceTree = "<group>"; };
+		91C1F0251C77EA1C00F88A95 /* en-us-phone.lm.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "en-us-phone.lm.bin"; sourceTree = "<group>"; };
+		91C1F0261C77EA1C00F88A95 /* en-us.lm.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "en-us.lm.bin"; sourceTree = "<group>"; };
+		91E7B9711C77EEB600BD6623 /* AudioFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileReader.h; sourceTree = "<group>"; };
+		91E7B9721C77EEB600BD6623 /* AudioFileReader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioFileReader.mm; sourceTree = "<group>"; };
+		91E7B9731C77EEB600BD6623 /* AudioFileWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileWriter.h; sourceTree = "<group>"; };
+		91E7B9741C77EEB600BD6623 /* AudioFileWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFileWriter.m; sourceTree = "<group>"; };
+		91E7B9751C77EEB600BD6623 /* Novocaine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Novocaine.h; sourceTree = "<group>"; };
+		91E7B9761C77EEB600BD6623 /* Novocaine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Novocaine.m; sourceTree = "<group>"; };
+		91E7B9771C77EEB600BD6623 /* RingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RingBuffer.h; sourceTree = "<group>"; };
+		91E7B9781C77EEB600BD6623 /* RingBuffer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RingBuffer.mm; sourceTree = "<group>"; };
+		91F9CC1B1C75035000B7474A /* NinjaExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NinjaExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91F9CC1F1C75035000B7474A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		91F9CC211C75035000B7474A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		91F9CC221C75035000B7474A /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		91F9CC241C75035000B7474A /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = MegaJumpExample/GameScene.h; sourceTree = "<group>"; };
+		91F9CC251C75035000B7474A /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GameScene.m; path = MegaJumpExample/GameScene.m; sourceTree = "<group>"; };
+		91F9CC271C75035000B7474A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = GameScene.sks; path = MegaJumpExample/GameScene.sks; sourceTree = "<group>"; };
+		91F9CC291C75035000B7474A /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		91F9CC2A1C75035000B7474A /* GameViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GameViewController.mm; sourceTree = "<group>"; };
+		91F9CC2D1C75035000B7474A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		91F9CC2F1C75035000B7474A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		91F9CC321C75035000B7474A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		91F9CC341C75035000B7474A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91F9CC3B1C75053600B7474A /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
+		91F9CC3C1C75053600B7474A /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		91F9CC3D1C75053600B7474A /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = sprites.atlas; path = MegaJumpExample/sprites.atlas; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91C1EFE61C77E3C300F88A95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C1F0191C77E9FD00F88A95 /* libsphinxbase.3.dylib in Frameworks */,
+				91C1F0011C77E43200F88A95 /* SpriteKit.framework in Frameworks */,
+				91C1F0171C77E9EE00F88A95 /* libsphinxad.3.dylib in Frameworks */,
+				91C1F0151C77E9DD00F88A95 /* libpocketsphinx.3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91F9CC181C75035000B7474A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C1EFBD1C77D49900F88A95 /* SpriteKit.framework in Frameworks */,
+				91C1EFBA1C77D47800F88A95 /* UIKit.framework in Frameworks */,
+				91A0A2301C76B13300A1F492 /* Slt.framework in Frameworks */,
+				91A0A22F1C76B13300A1F492 /* OpenEars.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		91A0A2281C76B13200A1F492 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				91A0A2291C76B13200A1F492 /* AcousticModelEnglish.bundle */,
+				91A0A22A1C76B13300A1F492 /* AcousticModelSpanish.bundle */,
+				91A0A22B1C76B13300A1F492 /* OpenEars.framework */,
+				91A0A22C1C76B13300A1F492 /* Slt.framework */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		91C1EFB81C77D20100F88A95 /* SharedResources */ = {
+			isa = PBXGroup;
+			children = (
+				91F9CC241C75035000B7474A /* GameScene.h */,
+				91F9CC251C75035000B7474A /* GameScene.m */,
+				91F9CC271C75035000B7474A /* GameScene.sks */,
+				91C1EFC11C77D6E800F88A95 /* SKMScene.h */,
+				91C1EFC21C77D6E800F88A95 /* SKMScene.m */,
+				91F9CC3A1C75053600B7474A /* Sounds */,
+				91C1F0021C77E7DE00F88A95 /* spritesMac.atlas */,
+				91F9CC3D1C75053600B7474A /* sprites.atlas */,
+			);
+			name = SharedResources;
+			sourceTree = "<group>";
+		};
+		91C1EFEA1C77E3C300F88A95 /* NinjaExampleMacOS */ = {
+			isa = PBXGroup;
+			children = (
+				91E7B9701C77EEB600BD6623 /* Novocaine */,
+				91C1F0141C77E9DD00F88A95 /* libpocketsphinx.3.dylib */,
+				91C1F0161C77E9EE00F88A95 /* libsphinxad.3.dylib */,
+				91C1F0181C77E9FD00F88A95 /* libsphinxbase.3.dylib */,
+				91C1F01A1C77EA1C00F88A95 /* en-us */,
+				91C1EFEB1C77E3C300F88A95 /* AppDelegate.h */,
+				91C1EFEC1C77E3C300F88A95 /* AppDelegate.mm */,
+				91C1F0051C77E83500F88A95 /* PocketSphinxWrapper.hpp */,
+				91C1F0041C77E83500F88A95 /* PocketSphinxWrapper.cpp */,
+				91C1EFF61C77E3C300F88A95 /* Assets.xcassets */,
+				91C1EFF81C77E3C300F88A95 /* MainMenu.xib */,
+				91C1EFFB1C77E3C300F88A95 /* Info.plist */,
+				91C1EFEE1C77E3C300F88A95 /* Supporting Files */,
+			);
+			path = NinjaExampleMacOS;
+			sourceTree = "<group>";
+		};
+		91C1EFEE1C77E3C300F88A95 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				91C1EFEF1C77E3C300F88A95 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		91C1F01A1C77EA1C00F88A95 /* en-us */ = {
+			isa = PBXGroup;
+			children = (
+				91C1F01B1C77EA1C00F88A95 /* cmudict-en-us.dict */,
+				91C1F01C1C77EA1C00F88A95 /* en-us */,
+				91C1F0251C77EA1C00F88A95 /* en-us-phone.lm.bin */,
+				91C1F0261C77EA1C00F88A95 /* en-us.lm.bin */,
+			);
+			path = "en-us";
+			sourceTree = "<group>";
+		};
+		91C1F01C1C77EA1C00F88A95 /* en-us */ = {
+			isa = PBXGroup;
+			children = (
+				91C1F01D1C77EA1C00F88A95 /* feat.params */,
+				91C1F01E1C77EA1C00F88A95 /* mdef */,
+				91C1F01F1C77EA1C00F88A95 /* means */,
+				91C1F0201C77EA1C00F88A95 /* noisedict */,
+				91C1F0211C77EA1C00F88A95 /* README */,
+				91C1F0221C77EA1C00F88A95 /* sendump */,
+				91C1F0231C77EA1C00F88A95 /* transition_matrices */,
+				91C1F0241C77EA1C00F88A95 /* variances */,
+			);
+			path = "en-us";
+			sourceTree = "<group>";
+		};
+		91E7B9701C77EEB600BD6623 /* Novocaine */ = {
+			isa = PBXGroup;
+			children = (
+				91E7B9711C77EEB600BD6623 /* AudioFileReader.h */,
+				91E7B9721C77EEB600BD6623 /* AudioFileReader.mm */,
+				91E7B9731C77EEB600BD6623 /* AudioFileWriter.h */,
+				91E7B9741C77EEB600BD6623 /* AudioFileWriter.m */,
+				91E7B9751C77EEB600BD6623 /* Novocaine.h */,
+				91E7B9761C77EEB600BD6623 /* Novocaine.m */,
+				91E7B9771C77EEB600BD6623 /* RingBuffer.h */,
+				91E7B9781C77EEB600BD6623 /* RingBuffer.mm */,
+			);
+			path = Novocaine;
+			sourceTree = "<group>";
+		};
+		91F9CC121C75034F00B7474A = {
+			isa = PBXGroup;
+			children = (
+				91C1EFBC1C77D49900F88A95 /* SpriteKit.framework */,
+				91C1EFB91C77D47800F88A95 /* UIKit.framework */,
+				91C1EFB81C77D20100F88A95 /* SharedResources */,
+				91F9CC1D1C75035000B7474A /* NinjaExample */,
+				91C1EFEA1C77E3C300F88A95 /* NinjaExampleMacOS */,
+				91F9CC1C1C75035000B7474A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		91F9CC1C1C75035000B7474A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91F9CC1B1C75035000B7474A /* NinjaExample.app */,
+				91C1EFE91C77E3C300F88A95 /* NinjaExampleMacOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91F9CC1D1C75035000B7474A /* NinjaExample */ = {
+			isa = PBXGroup;
+			children = (
+				91A0A2281C76B13200A1F492 /* Framework */,
+				91F9CC211C75035000B7474A /* AppDelegate.h */,
+				91F9CC221C75035000B7474A /* AppDelegate.mm */,
+				91F9CC291C75035000B7474A /* GameViewController.h */,
+				91F9CC2A1C75035000B7474A /* GameViewController.mm */,
+				91F9CC2C1C75035000B7474A /* Main.storyboard */,
+				91F9CC2F1C75035000B7474A /* Assets.xcassets */,
+				91F9CC311C75035000B7474A /* LaunchScreen.storyboard */,
+				91F9CC341C75035000B7474A /* Info.plist */,
+				91F9CC1E1C75035000B7474A /* Supporting Files */,
+			);
+			name = NinjaExample;
+			path = MegaJumpExample;
+			sourceTree = "<group>";
+		};
+		91F9CC1E1C75035000B7474A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				91F9CC1F1C75035000B7474A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		91F9CC3A1C75053600B7474A /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				91F9CC3B1C75053600B7474A /* background-music-aac.caf */,
+				91F9CC3C1C75053600B7474A /* pew-pew-lei.caf */,
+			);
+			name = Sounds;
+			path = MegaJumpExample/Sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		91C1EFE81C77E3C300F88A95 /* NinjaExampleMacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91C1EFFC1C77E3C300F88A95 /* Build configuration list for PBXNativeTarget "NinjaExampleMacOS" */;
+			buildPhases = (
+				91C1EFE51C77E3C300F88A95 /* Sources */,
+				91C1EFE61C77E3C300F88A95 /* Frameworks */,
+				91C1EFE71C77E3C300F88A95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NinjaExampleMacOS;
+			productName = NinjaExampleMacOS;
+			productReference = 91C1EFE91C77E3C300F88A95 /* NinjaExampleMacOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		91F9CC1A1C75035000B7474A /* NinjaExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91F9CC371C75035000B7474A /* Build configuration list for PBXNativeTarget "NinjaExample" */;
+			buildPhases = (
+				91F9CC171C75035000B7474A /* Sources */,
+				91F9CC181C75035000B7474A /* Frameworks */,
+				91F9CC191C75035000B7474A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NinjaExample;
+			productName = MegaJumpExample;
+			productReference = 91F9CC1B1C75035000B7474A /* NinjaExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91F9CC131C75034F00B7474A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Moses Lee";
+				TargetAttributes = {
+					91C1EFE81C77E3C300F88A95 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					91F9CC1A1C75035000B7474A = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = PYF7E49S7D;
+					};
+				};
+			};
+			buildConfigurationList = 91F9CC161C75034F00B7474A /* Build configuration list for PBXProject "NinjaExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 91F9CC121C75034F00B7474A;
+			productRefGroup = 91F9CC1C1C75035000B7474A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91F9CC1A1C75035000B7474A /* NinjaExample */,
+				91C1EFE81C77E3C300F88A95 /* NinjaExampleMacOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		91C1EFE71C77E3C300F88A95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C1F02C1C77EA1C00F88A95 /* README in Resources */,
+				91C1F02F1C77EA1C00F88A95 /* variances in Resources */,
+				91C1F02A1C77EA1C00F88A95 /* means in Resources */,
+				91C1F0031C77E7DE00F88A95 /* spritesMac.atlas in Resources */,
+				91C1EFF71C77E3C300F88A95 /* Assets.xcassets in Resources */,
+				91C1F02B1C77EA1C00F88A95 /* noisedict in Resources */,
+				91C1F0311C77EA1C00F88A95 /* en-us.lm.bin in Resources */,
+				91C1F02D1C77EA1C00F88A95 /* sendump in Resources */,
+				91C1F02E1C77EA1C00F88A95 /* transition_matrices in Resources */,
+				91C1F0291C77EA1C00F88A95 /* mdef in Resources */,
+				91C1F0301C77EA1C00F88A95 /* en-us-phone.lm.bin in Resources */,
+				91C1F0271C77EA1C00F88A95 /* cmudict-en-us.dict in Resources */,
+				91C1F0281C77EA1C00F88A95 /* feat.params in Resources */,
+				91C1EFFA1C77E3C300F88A95 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91F9CC191C75035000B7474A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91F9CC401C75053600B7474A /* sprites.atlas in Resources */,
+				91A0A22E1C76B13300A1F492 /* AcousticModelSpanish.bundle in Resources */,
+				91A0A22D1C76B13300A1F492 /* AcousticModelEnglish.bundle in Resources */,
+				91F9CC3E1C75053600B7474A /* background-music-aac.caf in Resources */,
+				91F9CC281C75035000B7474A /* GameScene.sks in Resources */,
+				91F9CC331C75035000B7474A /* LaunchScreen.storyboard in Resources */,
+				91F9CC301C75035000B7474A /* Assets.xcassets in Resources */,
+				91F9CC2E1C75035000B7474A /* Main.storyboard in Resources */,
+				91F9CC3F1C75053600B7474A /* pew-pew-lei.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91C1EFE51C77E3C300F88A95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91E7B97B1C77EEB600BD6623 /* Novocaine.m in Sources */,
+				91C1F0061C77E83500F88A95 /* PocketSphinxWrapper.cpp in Sources */,
+				91C1EFF01C77E3C300F88A95 /* main.m in Sources */,
+				91E7B97C1C77EEB600BD6623 /* RingBuffer.mm in Sources */,
+				91C1EFFF1C77E41900F88A95 /* GameScene.m in Sources */,
+				91E7B9791C77EEB600BD6623 /* AudioFileReader.mm in Sources */,
+				91C1F0001C77E41C00F88A95 /* SKMScene.m in Sources */,
+				91C1EFED1C77E3C300F88A95 /* AppDelegate.mm in Sources */,
+				91E7B97A1C77EEB600BD6623 /* AudioFileWriter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91F9CC171C75035000B7474A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91F9CC2B1C75035000B7474A /* GameViewController.mm in Sources */,
+				91F9CC231C75035000B7474A /* AppDelegate.mm in Sources */,
+				91F9CC261C75035000B7474A /* GameScene.m in Sources */,
+				91F9CC201C75035000B7474A /* main.m in Sources */,
+				91C1EFC31C77D6E800F88A95 /* SKMScene.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		91C1EFF81C77E3C300F88A95 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91C1EFF91C77E3C300F88A95 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		91F9CC2C1C75035000B7474A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91F9CC2D1C75035000B7474A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		91F9CC311C75035000B7474A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91F9CC321C75035000B7474A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		91C1EFFD1C77E3C300F88A95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/sphinxbase/,
+					/usr/local/include/pocketsphinx/,
+					/usr/local/include/,
+				);
+				INFOPLIST_FILE = NinjaExampleMacOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(PROJECT_DIR)/NinjaExampleMacOS",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moses.NinjaExampleMacOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		91C1EFFE1C77E3C300F88A95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/sphinxbase/,
+					/usr/local/include/pocketsphinx/,
+					/usr/local/include/,
+				);
+				INFOPLIST_FILE = NinjaExampleMacOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(PROJECT_DIR)/NinjaExampleMacOS",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moses.NinjaExampleMacOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		91F9CC351C75035000B7474A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		91F9CC361C75035000B7474A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		91F9CC381C75035000B7474A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MegaJumpExample/Framework",
+				);
+				INFOPLIST_FILE = MegaJumpExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moses.NinjaExample;
+				PRODUCT_NAME = NinjaExample;
+			};
+			name = Debug;
+		};
+		91F9CC391C75035000B7474A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MegaJumpExample/Framework",
+				);
+				INFOPLIST_FILE = MegaJumpExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moses.NinjaExample;
+				PRODUCT_NAME = NinjaExample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91C1EFFC1C77E3C300F88A95 /* Build configuration list for PBXNativeTarget "NinjaExampleMacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91C1EFFD1C77E3C300F88A95 /* Debug */,
+				91C1EFFE1C77E3C300F88A95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91F9CC161C75034F00B7474A /* Build configuration list for PBXProject "NinjaExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91F9CC351C75035000B7474A /* Debug */,
+				91F9CC361C75035000B7474A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91F9CC371C75035000B7474A /* Build configuration list for PBXNativeTarget "NinjaExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91F9CC381C75035000B7474A /* Debug */,
+				91F9CC391C75035000B7474A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91F9CC131C75034F00B7474A /* Project object */;
+}

@@ -10,4 +10,7 @@
 
 @interface SKMScene :SKScene
 
+-(void)screenInteractionStartedAtLocation:(CGPoint)location;
+-(void)screenInteractionEndedAtLocation:(CGPoint)location;
+
 @end
